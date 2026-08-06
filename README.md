@@ -1,49 +1,61 @@
-<div align="center">
+![Chu-Jong-Hoon 프로필 상단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=180&section=header&text=Chu-Jong-Hoon&fontSize=40)
 
-### 안녕하세요 기록하는 개발자 주종훈입니다
+<table>
+<tr>
+<td width="55%" valign="top">
 
-<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+### 안녕하세요 기록하는 개발자 주종훈입니다 👋
 
-</div>
+<!-- TODO: solved.ac 핸들 채우고 링크도 본인 프로필 주소로 바꾸기 -->
+[![solved.ac tier](https://solved.ac/api/v3/user/svg?handle=TODO_백준아이디)](https://solved.ac/profile/TODO_백준아이디)
+
+<!-- TODO: 블로그 주소 채우기 -->
+[![Blog](https://img.shields.io/badge/Blog-000000?style=for-the-badge&logoColor=white)](https://TODO-블로그-주소)
+
+</td>
+<td width="45%" valign="top">
+
+![Chu-Jong-Hoon GitHub Stats](https://github-readme-stats.vercel.app/api?username=Chu-Jong-Hoon&show_icons=true&theme=default&hide_border=true)
+
+</td>
+</tr>
+</table>
+
+![Chu-Jong-Hoon 자주 쓰는 언어](https://github-readme-stats.vercel.app/api/top-langs/?username=Chu-Jong-Hoon&layout=compact&hide_border=true)
+
+**Studying**
+
+<p>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+<img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+<img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA">
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+</p>
 
 ---
 
-<div align="center">
-
-# 📅 Chu-Jong-Hoon's Daily Board
-
-### 2026년 8월 6일 (목)
-
-</div>
-
----
-
-## 🔥 오늘 시간표
+## 🔥 오늘 할 일
 
 `░░░░░░░░░░░░░░░░░░░░░░` **0/4** (0%)
 
-| 시간 | 내용 |
-| :---: | --- |
-| `09:00` | 🔴 **간단한 데일리 스크럼 진행 및 현재 진행상황 공유** |
-| `10:00` | 🔴 **8월2주차 깃에 이슈 설정 및 현재 어디까지 진행되었고 어디까지 할 수 있는지 목표 설정** |
-| `11:00` | ⬜ fix: 이메일 인증코드 요청/확인에 rate limit 적용 #152 |
-| `12:00` | ⬜ 요셉님 진행 상황 여부 - feat: 취소표 대기 매칭 알림 - 이메일 발송 API (user-service) #118 |
-| `13:00` | 🔴 **그대로 진행 및 상황보고, 자기소개서 및 기업 스크립트** |
-| `14:00` | 🔴 **현재 내 상황 숙지 및 앞으로 미래 방향성 설정** |
-| `15:00` | ⬜ feat: 취소표 대기 매칭 알림 - 이메일 발송 API (user-service) 구현, 배포까지 된다면 실제 이메일 연동해서 테스트 |
-| `16:00` | 🔴 **코드 공부 및 멘토링 준비** |
-| `20:00` | 🔴 **귀가** |
-| `21:00` | 🔴 **멘토링 진행** |
-| `22:30` | ⬜ sql 공부 및 스프링 부트 공부 |
-| `24:00` | 🔴 **일기 및 오늘 공부 내용 정리 (tistory나 깃에 올리기)** |
-| `01:00` | 🔴 **내일 할 것들 정리 및 취침 준비** |
+- `09:00` **🔴 간단한 데일리 스크럼 진행 및 현재 진행상황 공유**
+- `10:00` **🔴 8월2주차 깃에 이슈 설정 및 현재 어디까지 진행되었고 어디까지 할 수 있는지 목표 설정**
+- [ ] `11:00` fix: 이메일 인증코드 요청/확인에 rate limit 적용 #152
+- [ ] `12:00` 요셉님 진행 상황 여부 - feat: 취소표 대기 매칭 알림 - 이메일 발송 API (user-service) #118
+- `13:00` **🔴 그대로 진행 및 상황보고, 자기소개서 및 기업 스크립트**
+- `14:00` **🔴 현재 내 상황 숙지 및 앞으로 미래 방향성 설정**
+- [ ] `15:00` feat: 취소표 대기 매칭 알림 - 이메일 발송 API (user-service) 구현, 배포까지 된다면 실제 이메일 연동해서 테스트
+- `16:00` **🔴 코드 공부 및 멘토링 준비**
+- `20:00` **🔴 귀가**
+- `21:00` **🔴 멘토링 진행**
+- [ ] `22:30` sql 공부 및 스프링 부트 공부
+- `24:00` **🔴 일기 및 오늘 공부 내용 정리 (tistory나 깃에 올리기)**
+- `01:00` **🔴 내일 할 것들 정리 및 취침 준비**
 
 ## 🗓️ 8월 달력
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/calendar-2026-08-dark.svg">
-  <img alt="2026년 8월 달력" src="assets/calendar-2026-08-light.svg" width="100%">
-</picture>
 
 **📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**
 
@@ -55,14 +67,6 @@
 | 16 | 17 | 18 | 19 | 20 | 21 | 22 |
 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |
 | 30 | 31 |   |   |   |   |   |
-
-## 🎯 이번 달 목표
-
-`███████░░░░░░░░░░░░░░░` **1/3** (33%)
-
-- [ ] OverTimeKK 백엔드 API 완성
-- [ ] 알고리즘 30문제 풀기
-- [x] 개발 환경 세팅
 
 ## ⏳ 다가오는 중요 일정
 
@@ -121,4 +125,28 @@
 
 **연도별 아카이브:** [2026](archive/2026.md)
 
-<sub>이 README 는 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 12:13 KST</sub>
+<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 12:36 KST</sub>
+
+---
+
+## 📚 교육 Education
+
+- (예시) OO대학교 컴퓨터공학과 졸업 (2020.03 ~ 2024.02)
+
+## 💻 경력 Experience
+
+- (예시) OO회사 백엔드 개발자 (2024.03 ~ 재직중)
+
+## 🏆 수상 Award
+
+| 기간 | 프로젝트명 | 수상 | 주최 |
+| :---: | --- | --- | --- |
+| (예시) 2025.11 | OverTimeKK | 최우수상 | OO해커톤 |
+
+## 🚀 프로젝트 Projects
+
+| 프로젝트명 | 기간 | 설명 | 링크 |
+| --- | :---: | --- | :---: |
+| (예시) OverTimeKK | 2026.07 ~ | 초과근무 관리 백엔드 API | [GitHub](#) |
+
+![Chu-Jong-Hoon 프로필 하단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)
