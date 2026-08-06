@@ -24,6 +24,15 @@ KST = ZoneInfo("Asia/Seoul")
 WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"]
 USER = "Chu-Jong-Hoon"
 
+# 프로필 상단 소개 문구 / 기술스택 배지 (plans 데이터와 무관하게 항상 고정 노출)
+INTRO_TEXT = "안녕하세요 기록하는 개발자 주종훈입니다"
+BADGES = [
+    ("Java", "ED8B00", "openjdk"),
+    ("Spring%20Boot", "6DB33F", "springboot"),
+    ("MySQL", "4479A1", "mysql"),
+    ("Git", "F05032", "git"),
+]
+
 
 # --------------------------------------------------------------------------
 # 파싱
@@ -414,6 +423,30 @@ def calendar_picture_lines(rel: str, y: int, m: int, alt: str) -> list[str]:
     ]
 
 
+def day_anchor(month: int, day: int) -> str:
+    return f"d{month:02d}{day:02d}"
+
+
+def day_nav_table(mo: Month, today: dt.date, href_prefix: str = "") -> list[str]:
+    """달력 그림 아래에 넣는 클릭 가능한 날짜표. 내용이 있는 날만 링크가 걸린다."""
+    weeks = calendar.Calendar(firstweekday=6).monthdayscalendar(mo.year, mo.month)
+    L = ["| " + " | ".join(WEEKDAYS) + " |", "|" + ":---:|" * 7]
+    for week in weeks:
+        cells = []
+        for day in week:
+            if day == 0:
+                cells.append(" ")
+                continue
+            label = f"**{day}**" if dt.date(mo.year, mo.month, day) == today else str(day)
+            if mo.days.get(day):
+                cells.append(f"[{label}]({href_prefix}#{day_anchor(mo.month, day)})")
+            else:
+                cells.append(label)
+        L.append("| " + " | ".join(cells) + " |")
+    L.append("")
+    return L
+
+
 # --------------------------------------------------------------------------
 # 공용 렌더링 조각 (README / 아카이브 공용)
 # --------------------------------------------------------------------------
@@ -472,6 +505,7 @@ def day_detail_lines(mo: Month, today: dt.date) -> list[str]:
         except ValueError:
             continue
         mark = " ← **오늘**" if d == today else ""
+        L.append(f'<a id="{day_anchor(mo.month, day)}"></a>')
         L.append(f"#### {mo.month:02d}/{day:02d} ({WEEKDAYS[(d.weekday() + 1) % 7]}){mark}")
         L.append("")
         ordered = sorted(items, key=lambda i: time_sort_key(i.time) if i.time else (99, 99))
@@ -497,9 +531,25 @@ def extras_lines(mo: Month) -> list[str]:
 # --------------------------------------------------------------------------
 # README
 # --------------------------------------------------------------------------
+def intro_lines() -> list[str]:
+    badges = " ".join(
+        f'<img src="https://img.shields.io/badge/{label}-{color}?style=for-the-badge&logo={logo}&logoColor=white">'
+        for label, color, logo in BADGES
+    )
+    return [
+        '<div align="center">', "",
+        f"### {INTRO_TEXT}", "",
+        badges, "",
+        "</div>", "",
+        "---", "",
+    ]
+
+
 def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years: list[int]) -> str:
     wd = WEEKDAYS[(today.weekday() + 1) % 7]
     L: list[str] = []
+
+    L += intro_lines()
 
     L.append('<div align="center">')
     L.append("")
@@ -544,6 +594,10 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
     L.append("")
     L += calendar_picture_lines("", mo.year, mo.month, f"{mo.year}년 {mo.month}월 달력")
     L.append("")
+    if mo.days:
+        L.append("**📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**")
+        L.append("")
+        L += day_nav_table(mo, today, href_prefix=f"archive/{mo.year}-{mo.month:02d}.md")
 
     # 이번 달 목표
     L += goals_lines(mo)
@@ -617,6 +671,10 @@ def build_archive_month(mo: Month, today: dt.date, months: set[tuple[int, int]],
     L.append("")
     L += calendar_picture_lines("../", mo.year, mo.month, f"{mo.year}년 {mo.month}월 달력")
     L.append("")
+    if mo.days:
+        L.append("**📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**")
+        L.append("")
+        L += day_nav_table(mo, today, href_prefix="")
     L += goals_lines(mo)
 
     if mo.days:
