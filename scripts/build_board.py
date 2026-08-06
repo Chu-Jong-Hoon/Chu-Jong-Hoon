@@ -443,7 +443,7 @@ def day_nav_table(mo: Month, today: dt.date, href_prefix: str = "") -> list[str]
             if day == 0:
                 cells.append(" ")
                 continue
-            label = f"**{day}**" if dt.date(mo.year, mo.month, day) == today else str(day)
+            label = f"🔵**{day}**" if dt.date(mo.year, mo.month, day) == today else str(day)
             if mo.days.get(day):
                 cells.append(f"[{label}]({href_prefix}#{day_anchor(mo.month, day)})")
             else:
@@ -570,16 +570,18 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
                  f"(plans/{mo.year}-{mo.month:02d}.md) 에 `## {today.day:02d} ({wd})` 를 추가하세요.")
         L.append("")
 
-    # 달력 + 다가오는 중요 일정 (같이 묶어서 하나의 섹션으로)
+    # 달력 + 다가오는 중요 일정 (좌우로 나란히)
     L.append(f"## 🗓️ {mo.month}월 달력")
     L.append("")
+
+    cal_lines: list[str] = []
     if mo.days:
-        L.append("**📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**")
-        L.append("")
-        L += day_nav_table(mo, today, href_prefix=f"archive/{mo.year}-{mo.month:02d}.md")
+        cal_lines.append("**📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**")
+        cal_lines.append("")
+        cal_lines += day_nav_table(mo, today, href_prefix=f"archive/{mo.year}-{mo.month:02d}.md")
     else:
-        L.append(f"[전체 달력 보기 →](archive/{mo.year}-{mo.month:02d}.md)")
-        L.append("")
+        cal_lines.append(f"[전체 달력 보기 →](archive/{mo.year}-{mo.month:02d}.md)")
+        cal_lines.append("")
 
     upcoming: list[tuple[int, Item]] = []
     for day, items in mo.days.items():
@@ -588,23 +590,41 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
         except ValueError:
             continue
         dd = (date - today).days
-        if 1 <= dd <= 14:  # 오늘(dd=0)은 위 시간표에 이미 다 나오므로 제외
+        if 1 <= dd <= 14:  # 오늘(dd=0)은 위 할일에 이미 다 나오므로 제외
             for i in items:
                 if i.important or i.time:
                     if not i.done:
                         upcoming.append((dd, i))
+    upcoming_lines: list[str] = []
     if upcoming:
-        L.append("**⏳ 다가오는 중요 일정**")
-        L.append("")
-        L.append("| D-day | 날짜 | 내용 |")
-        L.append("| :---: | :---: | --- |")
+        upcoming_lines.append("**⏳ 다가오는 중요 일정**")
+        upcoming_lines.append("")
+        upcoming_lines.append("| D-day | 날짜 | 내용 |")
+        upcoming_lines.append("| :---: | :---: | --- |")
         for dd, i in sorted(upcoming, key=lambda x: (x[0], x[1].time or "zz"))[:8]:
             d = today + dt.timedelta(days=dd)
             label = "**D-DAY**" if dd == 0 else f"D-{dd}"
             when = f"{d.month:02d}/{d.day:02d} ({WEEKDAYS[(d.weekday() + 1) % 7]})"
             body = (f"`{i.time}` " if i.time else "") + i.text
-            L.append(f"| {label} | {when} | {'🔴 ' if i.important else ''}{body} |")
+            upcoming_lines.append(f"| {label} | {when} | {'🔴 ' if i.important else ''}{body} |")
+        upcoming_lines.append("")
+
+    if upcoming_lines:
+        L.append("<table>")
+        L.append("<tr>")
+        L.append('<td valign="top" width="55%">')
         L.append("")
+        L += cal_lines
+        L.append("</td>")
+        L.append('<td valign="top" width="45%">')
+        L.append("")
+        L += upcoming_lines
+        L.append("</td>")
+        L.append("</tr>")
+        L.append("</table>")
+        L.append("")
+    else:
+        L += cal_lines
 
     # 전체 월 상세
     if mo.days:
