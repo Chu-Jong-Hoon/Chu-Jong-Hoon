@@ -19,19 +19,25 @@ ROOT = Path(__file__).resolve().parents[1]
 PLANS_DIR = ROOT / "plans"
 ASSETS_DIR = ROOT / "assets"
 ARCHIVE_DIR = ROOT / "archive"
+PROFILE_DIR = ROOT / "profile"
 KST = ZoneInfo("Asia/Seoul")
 
 WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"]
 USER = "Chu-Jong-Hoon"
 
-# 프로필 상단 소개 문구 / 기술스택 배지 (plans 데이터와 무관하게 항상 고정 노출)
-INTRO_TEXT = "안녕하세요 기록하는 개발자 주종훈입니다"
-BADGES = [
-    ("Java", "ED8B00", "openjdk"),
-    ("Spring%20Boot", "6DB33F", "springboot"),
-    ("MySQL", "4479A1", "mysql"),
-    ("Git", "F05032", "git"),
-]
+# profile/intro.md, profile/about.md 는 직접 손으로 쓰는 파일이라 스크립트가 절대 덮어쓰지 않는다.
+# 없으면 그냥 건너뛴다.
+CAPSULE_HEADER = ("https://capsule-render.vercel.app/api?type=waving&color=timeGradient"
+                   "&height=180&section=header&text=Chu-Jong-Hoon&fontSize=40")
+CAPSULE_FOOTER = ("https://capsule-render.vercel.app/api?type=waving&color=timeGradient"
+                   "&height=100&section=footer")
+
+
+def read_fragment(name: str) -> str:
+    path = PROFILE_DIR / name
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8").strip()
 
 
 # --------------------------------------------------------------------------
@@ -475,14 +481,6 @@ def time_sort_key(time: str) -> tuple[int, int]:
     return h, mi
 
 
-def schedule_row(item: Item) -> str:
-    icon = "✅" if item.done else "⬜" if item.is_task else "🔴" if item.important else "📝"
-    text = item.text.replace("|", "\\|")
-    if item.important:
-        text = f"**{text}**"
-    return f"| `{item.time}` | {icon} {text} |"
-
-
 def goals_lines(mo: Month) -> list[str]:
     if not mo.goals:
         return []
@@ -531,76 +529,50 @@ def extras_lines(mo: Month) -> list[str]:
 # --------------------------------------------------------------------------
 # README
 # --------------------------------------------------------------------------
-def intro_lines() -> list[str]:
-    badges = " ".join(
-        f'<img src="https://img.shields.io/badge/{label}-{color}?style=for-the-badge&logo={logo}&logoColor=white">'
-        for label, color, logo in BADGES
-    )
-    return [
-        '<div align="center">', "",
-        f"### {INTRO_TEXT}", "",
-        badges, "",
-        "</div>", "",
-        "---", "",
-    ]
-
-
 def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years: list[int]) -> str:
     wd = WEEKDAYS[(today.weekday() + 1) % 7]
     L: list[str] = []
 
-    L += intro_lines()
-
-    L.append('<div align="center">')
-    L.append("")
-    L.append(f"# 📅 {USER}'s Daily Board")
-    L.append("")
-    L.append(f"### {today.year}년 {today.month}월 {today.day}일 ({wd})")
-    L.append("")
-    L.append("</div>")
-    L.append("")
-    L.append("---")
+    L.append(f'![Chu-Jong-Hoon 프로필 상단 배너]({CAPSULE_HEADER})')
     L.append("")
 
-    # 오늘 시간표
+    intro = read_fragment("intro.md")
+    if intro:
+        L.append(intro)
+        L.append("")
+        L.append("---")
+        L.append("")
+
+    # 오늘 할 일
     todays = mo.days.get(today.day, []) if (mo.year, mo.month) == (today.year, today.month) else []
     tasks = [i for i in todays if i.is_task]
-    L.append("## 🔥 오늘 시간표")
+    L.append("## 🔥 오늘 할 일")
     L.append("")
     if todays:
         L.append(bar(sum(1 for i in tasks if i.done), len(tasks)))
         L.append("")
-        timed = sorted((i for i in todays if i.time), key=lambda i: time_sort_key(i.time))
-        untimed = [i for i in todays if not i.time]
-        if timed:
-            L.append("| 시간 | 내용 |")
-            L.append("| :---: | --- |")
-            for i in timed:
-                L.append(schedule_row(i))
-            L.append("")
-        if untimed:
-            L.append("**⏰ 시간 미정**")
-            L.append("")
-            for i in sorted(untimed, key=lambda i: (i.done is True, not i.important)):
-                L.append(fmt(i))
-            L.append("")
+        ordered = sorted(
+            todays,
+            key=lambda i: time_sort_key(i.time) if i.time else (99, 99),
+        )
+        for i in ordered:
+            L.append(fmt(i))
+        L.append("")
     else:
         L.append(f"> 오늘 등록된 계획이 없어요. [`plans/{mo.year}-{mo.month:02d}.md`]"
                  f"(plans/{mo.year}-{mo.month:02d}.md) 에 `## {today.day:02d} ({wd})` 를 추가하세요.")
         L.append("")
 
-    # 달력
+    # 달력 (SVG 대신 클릭 가능한 날짜표만 — README 안 details와 중복돼서 그림은 뺐다)
     L.append(f"## 🗓️ {mo.month}월 달력")
-    L.append("")
-    L += calendar_picture_lines("", mo.year, mo.month, f"{mo.year}년 {mo.month}월 달력")
     L.append("")
     if mo.days:
         L.append("**📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**")
         L.append("")
         L += day_nav_table(mo, today, href_prefix=f"archive/{mo.year}-{mo.month:02d}.md")
-
-    # 이번 달 목표
-    L += goals_lines(mo)
+    else:
+        L.append(f"[전체 달력 보기 →](archive/{mo.year}-{mo.month:02d}.md)")
+        L.append("")
 
     # 다가오는 일정
     upcoming: list[tuple[int, Item]] = []
@@ -650,9 +622,19 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
         L.append(f"**연도별 아카이브:** {archive_line}")
         L.append("")
 
-    L.append(f'<sub>이 README 는 자동 생성됩니다. 수정은 <a href="plans/{mo.year}-{mo.month:02d}.md">'
+    L.append(f'<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/{mo.year}-{mo.month:02d}.md">'
              f'plans/{mo.year}-{mo.month:02d}.md</a> 에서 하세요. '
              f'마지막 갱신: {dt.datetime.now(KST):%Y-%m-%d %H:%M} KST</sub>')
+    L.append("")
+
+    about = read_fragment("about.md")
+    if about:
+        L.append("---")
+        L.append("")
+        L.append(about)
+        L.append("")
+
+    L.append(f'![Chu-Jong-Hoon 프로필 하단 배너]({CAPSULE_FOOTER})')
     L.append("")
     return "\n".join(L)
 
