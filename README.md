@@ -19,6 +19,8 @@
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
 <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA">
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+<img src="https://img.shields.io/badge/ERDCloud-2C3E50?style=for-the-badge&logoColor=white" alt="ERDCloud">
 </p>
 
 ---
@@ -42,7 +44,10 @@
 
 | 프로젝트명 | 기간 | 설명 | 링크 |
 | --- | :---: | --- | :---: |
-| (예시) OverTimeKK | 2026.07 ~ | 초과근무 관리 백엔드 API | [GitHub](#) |
+| Re:Seat | 2026.07 ~ 진행중 | 취소표가 발생하면 대기열 순서대로 공정하게 재분배하는 공연 예매 플랫폼 | [GitHub](https://github.com/prgrms-be-adv-devcourse/beadv7_7_OverTimeKK_BE) |
+
+- **Re:Seat 담당 역할**: 회원(User) 도메인 — 회원가입, 로그인, JWT 인증, 이메일 본인인증 구현
+- **Re:Seat 기술 스택**: Java, Spring Boot, MSA(user/order/performance-service 분리), MySQL, Redis, JWT
 
 ---
 
@@ -66,19 +71,43 @@
 
 ## 🗓️ 8월 달력
 
+<table>
+<tr>
+<td valign="top" width="55%">
+
 **📌 날짜를 클릭하면 그 날 세부 계획으로 이동해요.**
 
 | 일 | 월 | 화 | 수 | 목 | 금 | 토 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |   |   |   |   |   |   | 1 |
-| 2 | 3 | 4 | 5 | [🔵**6**](archive/2026-08.md#d0806) | 7 | 8 |
-| 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+| 2 | 3 | 4 | [5](archive/2026-08.md#d0805) | [🔵**6**](archive/2026-08.md#d0806) | [7](archive/2026-08.md#d0807) | 8 |
+| 9 | [10](archive/2026-08.md#d0810) | 11 | 12 | 13 | [14](archive/2026-08.md#d0814) | 15 |
 | 16 | 17 | 18 | 19 | 20 | 21 | 22 |
 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |
 | 30 | 31 |   |   |   |   |   |
 
+</td>
+<td valign="top" width="45%">
+
+**⏳ 다가오는 중요 일정**
+
+| D-day | 날짜 | 내용 |
+| :---: | :---: | --- |
+| D-4 | 08/10 (월) | 🔴 중간 발표 자료 준비 |
+| D-8 | 08/14 (금) | 🔴 스프린트 마감 |
+
+</td>
+</tr>
+</table>
+
 <details>
 <summary><b>📖 8월 전체 계획 펼쳐보기</b></summary>
+
+<a id="d0805"></a>
+#### 08/05 (수)
+
+- [x] 프로젝트 구조 잡기
+- [x] Postman 컬렉션 정리
 
 <a id="d0806"></a>
 #### 08/06 (목) ← **오늘**
@@ -97,6 +126,22 @@
 - `24:00` **🔴 일기 및 오늘 공부 내용 정리 (tistory나 깃에 올리기)**
 - `01:00` **🔴 내일 할 것들 정리 및 취침 준비**
 
+<a id="d0807"></a>
+#### 08/07 (금)
+
+- [ ] 통합 테스트 작성
+- [ ] API 문서화
+
+<a id="d0810"></a>
+#### 08/10 (월)
+
+- **🔴 중간 발표 자료 준비**
+
+<a id="d0814"></a>
+#### 08/14 (금)
+
+- **🔴 스프린트 마감**
+
 </details>
 
 ---
@@ -105,6 +150,6 @@
 
 **연도별 아카이브:** [2026](archive/2026.md)
 
-<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 14:41 KST</sub>
+<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 14:48 KST</sub>
 
 ![Chu-Jong-Hoon 프로필 하단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)

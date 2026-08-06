@@ -17,4 +17,7 @@
 
 | 프로젝트명 | 기간 | 설명 | 링크 |
 | --- | :---: | --- | :---: |
-| (예시) OverTimeKK | 2026.07 ~ | 초과근무 관리 백엔드 API | [GitHub](#) |
+| Re:Seat | 2026.07 ~ 진행중 | 취소표가 발생하면 대기열 순서대로 공정하게 재분배하는 공연 예매 플랫폼 | [GitHub](https://github.com/prgrms-be-adv-devcourse/beadv7_7_OverTimeKK_BE) |
+
+- **Re:Seat 담당 역할**: 회원(User) 도메인 — 회원가입, 로그인, JWT 인증, 이메일 본인인증 구현
+- **Re:Seat 기술 스택**: Java, Spring Boot, MSA(user/order/performance-service 분리), MySQL, Redis, JWT
