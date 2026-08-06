@@ -1,35 +1,47 @@
 ![Chu-Jong-Hoon 프로필 상단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=180&section=header&text=Chu-Jong-Hoon&fontSize=40)
 
-<table>
-<tr>
-<td width="55%" valign="top">
-
 ### 안녕하세요 기록하는 개발자 주종훈입니다 👋
 
 [![Tech Blog](https://img.shields.io/badge/Tech%20Blog-000000?style=for-the-badge&logo=tistory&logoColor=white)](https://jaychu.tistory.com/)
 
-</td>
-<td width="45%" valign="top">
-
-![Chu-Jong-Hoon GitHub Stats](https://github-readme-stats.vercel.app/api?username=Chu-Jong-Hoon&show_icons=true&theme=default&hide_border=true)
-
-</td>
-</tr>
-</table>
-
-![Chu-Jong-Hoon 자주 쓰는 언어](https://github-readme-stats.vercel.app/api/top-langs/?username=Chu-Jong-Hoon&layout=compact&hide_border=true)
-
-**Studying**
+**Backend**
 
 <p>
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
 <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+</p>
+
+**Tools**
+
+<p>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
 <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA">
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
 </p>
+
+---
+
+## 📚 교육 Education
+
+- (예시) OO대학교 컴퓨터공학과 졸업 (2020.03 ~ 2024.02)
+
+## 💻 경력 Experience
+
+- (예시) OO회사 백엔드 개발자 (2024.03 ~ 재직중)
+
+## 🏆 수상 Award
+
+| 기간 | 프로젝트명 | 수상 | 주최 |
+| :---: | --- | --- | --- |
+| (예시) 2025.11 | OverTimeKK | 최우수상 | OO해커톤 |
+
+## 🚀 프로젝트 Projects
+
+| 프로젝트명 | 기간 | 설명 | 링크 |
+| --- | :---: | --- | :---: |
+| (예시) OverTimeKK | 2026.07 ~ | 초과근무 관리 백엔드 API | [GitHub](#) |
 
 ---
 
@@ -64,7 +76,7 @@
 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |
 | 30 | 31 |   |   |   |   |   |
 
-## ⏳ 다가오는 중요 일정
+**⏳ 다가오는 중요 일정**
 
 | D-day | 날짜 | 내용 |
 | :---: | :---: | --- |
@@ -121,28 +133,6 @@
 
 **연도별 아카이브:** [2026](archive/2026.md)
 
-<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 12:47 KST</sub>
-
----
-
-## 📚 교육 Education
-
-- (예시) OO대학교 컴퓨터공학과 졸업 (2020.03 ~ 2024.02)
-
-## 💻 경력 Experience
-
-- (예시) OO회사 백엔드 개발자 (2024.03 ~ 재직중)
-
-## 🏆 수상 Award
-
-| 기간 | 프로젝트명 | 수상 | 주최 |
-| :---: | --- | --- | --- |
-| (예시) 2025.11 | OverTimeKK | 최우수상 | OO해커톤 |
-
-## 🚀 프로젝트 Projects
-
-| 프로젝트명 | 기간 | 설명 | 링크 |
-| --- | :---: | --- | :---: |
-| (예시) OverTimeKK | 2026.07 ~ | 초과근무 관리 백엔드 API | [GitHub](#) |
+<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 14:19 KST</sub>
 
 ![Chu-Jong-Hoon 프로필 하단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)

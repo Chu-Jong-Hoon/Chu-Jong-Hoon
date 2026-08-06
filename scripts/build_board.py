@@ -543,6 +543,13 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
         L.append("---")
         L.append("")
 
+    about = read_fragment("about.md")
+    if about:
+        L.append(about)
+        L.append("")
+        L.append("---")
+        L.append("")
+
     # 오늘 할 일
     todays = mo.days.get(today.day, []) if (mo.year, mo.month) == (today.year, today.month) else []
     tasks = [i for i in todays if i.is_task]
@@ -563,7 +570,7 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
                  f"(plans/{mo.year}-{mo.month:02d}.md) 에 `## {today.day:02d} ({wd})` 를 추가하세요.")
         L.append("")
 
-    # 달력 (SVG 대신 클릭 가능한 날짜표만 — README 안 details와 중복돼서 그림은 뺐다)
+    # 달력 + 다가오는 중요 일정 (같이 묶어서 하나의 섹션으로)
     L.append(f"## 🗓️ {mo.month}월 달력")
     L.append("")
     if mo.days:
@@ -574,7 +581,6 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
         L.append(f"[전체 달력 보기 →](archive/{mo.year}-{mo.month:02d}.md)")
         L.append("")
 
-    # 다가오는 일정
     upcoming: list[tuple[int, Item]] = []
     for day, items in mo.days.items():
         try:
@@ -588,7 +594,7 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
                     if not i.done:
                         upcoming.append((dd, i))
     if upcoming:
-        L.append("## ⏳ 다가오는 중요 일정")
+        L.append("**⏳ 다가오는 중요 일정**")
         L.append("")
         L.append("| D-day | 날짜 | 내용 |")
         L.append("| :---: | :---: | --- |")
@@ -626,13 +632,6 @@ def build_readme(mo: Month, today: dt.date, months: set[tuple[int, int]], years:
              f'plans/{mo.year}-{mo.month:02d}.md</a> 에서 하세요. '
              f'마지막 갱신: {dt.datetime.now(KST):%Y-%m-%d %H:%M} KST</sub>')
     L.append("")
-
-    about = read_fragment("about.md")
-    if about:
-        L.append("---")
-        L.append("")
-        L.append(about)
-        L.append("")
 
     L.append(f'![Chu-Jong-Hoon 프로필 하단 배너]({CAPSULE_FOOTER})')
     L.append("")
