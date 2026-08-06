@@ -4,11 +4,7 @@
 
 ### 안녕하세요 기록하는 개발자 주종훈입니다 👋
 
-<!-- TODO: solved.ac 핸들 채우고 링크도 본인 프로필 주소로 바꾸기 -->
-[![solved.ac tier](https://solved.ac/api/v3/user/svg?handle=TODO_백준아이디)](https://solved.ac/profile/TODO_백준아이디)
-
-<!-- TODO: 블로그 주소 채우기 -->
-[![Blog](https://img.shields.io/badge/Blog-000000?style=for-the-badge&logoColor=white)](https://TODO-블로그-주소)
+[![Tech Blog](https://img.shields.io/badge/Tech%20Blog-000000?style=for-the-badge&logo=tistory&logoColor=white)](https://jaychu.tistory.com/)
 
 </td>
 <td width="45%" valign="top">
