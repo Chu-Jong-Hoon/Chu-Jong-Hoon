@@ -1,0 +1,40 @@
+name: Update board
+
+on:
+  push:
+    paths:
+      - "plans/**"
+      - "scripts/**"
+      - ".github/workflows/board.yml"
+  schedule:
+    - cron: "10 15 * * *"   # UTC 15:10 = KST 00:10 (매일 자정 갱신)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: board
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build README and calendar
+        run: python scripts/build_board.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet && echo "no changes" && exit 0
+          git commit -m "chore: update board ($(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M'))"
+          git push

@@ -1,16 +1,83 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Chu-Jong-Hoon/Chu-Jong-Hoon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 📅 Chu-Jong-Hoon's Daily Board
 
-Here are some ideas to get you started:
+### 2026년 8월 6일 (목)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
+
+---
+
+## 🔥 오늘 시간표
+
+`███████░░░░░░░░░░░░░░░` **1/3** (33%)
+
+| 시간 | 내용 |
+| :---: | --- |
+| `20:00` | 🔴 **팀 회의** |
+
+**⏰ 시간 미정**
+
+- [ ] JWT 인증 붙이기
+- [ ] 유저 도메인 엔티티 작성
+- [x] ERD 초안 그리기
+
+## 🗓️ 8월 달력
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/calendar-2026-08-dark.svg">
+  <img alt="2026년 8월 달력" src="assets/calendar-2026-08-light.svg" width="100%">
+</picture>
+
+## 🎯 이번 달 목표
+
+`███████░░░░░░░░░░░░░░░` **1/3** (33%)
+
+- [ ] OverTimeKK 백엔드 API 완성
+- [ ] 알고리즘 30문제 풀기
+- [x] 개발 환경 세팅
+
+## ⏳ 다가오는 중요 일정
+
+| D-day | 날짜 | 내용 |
+| :---: | :---: | --- |
+| D-4 | 08/10 (월) | 🔴 중간 발표 자료 준비 |
+| D-8 | 08/14 (금) | 🔴 스프린트 마감 |
+
+<details>
+<summary><b>📖 8월 전체 계획 펼쳐보기</b></summary>
+
+#### 08/05 (수)
+
+- [x] 프로젝트 구조 잡기
+- [x] Postman 컬렉션 정리
+
+#### 08/06 (목) ← **오늘**
+
+- `20:00` **🔴 팀 회의**
+- [ ] JWT 인증 붙이기
+- [ ] 유저 도메인 엔티티 작성
+- [x] ERD 초안 그리기
+
+#### 08/07 (금)
+
+- [ ] 통합 테스트 작성
+- [ ] API 문서화
+
+#### 08/10 (월)
+
+- **🔴 중간 발표 자료 준비**
+
+#### 08/14 (금)
+
+- **🔴 스프린트 마감**
+
+</details>
+
+---
+
+[📆 2026 연간](archive/2026.md)
+
+**연도별 아카이브:** [2026](archive/2026.md)
+
+<sub>이 README 는 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 11:38 KST</sub>
