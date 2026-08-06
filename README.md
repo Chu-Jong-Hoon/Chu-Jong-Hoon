@@ -33,6 +33,10 @@
 
 ## 💻 경력 Experience
 
+- 육군 5군단 C4I운영병 (2022.01 ~ 2023.07)
+  - 네트워크 운영 및 서버 배포, Tomcat 기반 WAS 운영
+  - 방화벽 IP 허용/차단 등 보안감사, PC 신규 세팅
+  - 지휘실 서버 모니터링 및 이중화(쉘터) 구성으로 장애 대응
 - 프로그래머스 데브코스 심화 — Spring AI & MSA 기반 백엔드 개발 과정 수강
 
 ## 🏆 수상 Award
@@ -111,6 +115,6 @@
 
 **연도별 아카이브:** [2026](archive/2026.md)
 
-<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 14:52 KST</sub>
+<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 15:21 KST</sub>
 
 ![Chu-Jong-Hoon 프로필 하단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)
