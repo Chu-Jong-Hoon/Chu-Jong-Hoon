@@ -133,6 +133,6 @@
 
 **연도별 아카이브:** [2026](archive/2026.md)
 
-<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 14:19 KST</sub>
+<sub>이 부분은 자동 생성됩니다. 수정은 <a href="plans/2026-08.md">plans/2026-08.md</a> 에서 하세요. 마지막 갱신: 2026-08-06 14:21 KST</sub>
 
 ![Chu-Jong-Hoon 프로필 하단 배너](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)
