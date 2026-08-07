@@ -30,23 +30,24 @@
 <rect x="328" y="166" width="98" height="72" rx="8" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
 <text x="339" y="190" font-size="16" font-weight="700" fill="#1f2328">5</text>
 </g>
-<g>
-<rect x="432" y="166" width="98" height="72" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-<text x="443" y="190" font-size="16" font-weight="700" fill="#0969da">6</text>
-<text x="520" y="187" font-size="10" font-weight="700" text-anchor="end" fill="#0969da">TODAY</text>
+<g opacity="0.45">
+<rect x="432" y="166" width="98" height="72" rx="8" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<text x="443" y="190" font-size="16" font-weight="700" fill="#1f2328">6</text>
+<circle cx="517" cy="183" r="4.5" fill="#cf222e"/>
 <circle cx="445" cy="213" r="4" fill="none" stroke="#0969da" stroke-width="1.8"/>
 <circle cx="458" cy="213" r="4" fill="none" stroke="#0969da" stroke-width="1.8"/>
 <circle cx="471" cy="213" r="4" fill="none" stroke="#0969da" stroke-width="1.8"/>
 <circle cx="484" cy="213" r="4" fill="none" stroke="#0969da" stroke-width="1.8"/>
 <text x="443" y="230" font-size="10" fill="#8b949e">0/4</text>
 </g>
-<g>
+<g opacity="0.45">
 <rect x="536" y="166" width="98" height="72" rx="8" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
 <text x="547" y="190" font-size="16" font-weight="700" fill="#1f2328">7</text>
 </g>
 <g>
-<rect x="640" y="166" width="98" height="72" rx="8" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<rect x="640" y="166" width="98" height="72" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
 <text x="651" y="190" font-size="16" font-weight="700" fill="#0969da">8</text>
+<text x="728" y="187" font-size="10" font-weight="700" text-anchor="end" fill="#0969da">TODAY</text>
 </g>
 <g>
 <rect x="16" y="244" width="98" height="72" rx="8" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>

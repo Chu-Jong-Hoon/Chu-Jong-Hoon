@@ -227,10 +227,10 @@
 <rect x="450" y="246" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="466" y="246" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="482" y="246" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
-<rect x="498" y="246" width="13" height="13" rx="3" fill="#9be9a8" stroke="#0969da" stroke-width="2"/>
+<rect x="498" y="246" width="13" height="13" rx="3" fill="#9be9a8" stroke="#d1d9e0" stroke-width="0.75"/>
 <circle cx="509" cy="249" r="2.2" fill="#cf222e"/>
 <rect x="514" y="246" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
-<rect x="530" y="246" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
+<rect x="530" y="246" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#0969da" stroke-width="2"/>
 <rect x="434" y="262" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="450" y="262" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="466" y="262" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
