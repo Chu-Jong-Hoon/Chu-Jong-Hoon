@@ -100,14 +100,14 @@
 <rect x="536" y="322" width="98" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
 <text x="547" y="346" font-size="16" font-weight="700" fill="#e6edf3">21</text>
 </g>
-<g>
-<rect x="640" y="322" width="98" height="72" rx="8" fill="#0c2d4d" stroke="#4493f8" stroke-width="2"/>
-<text x="651" y="346" font-size="16" font-weight="700" fill="#4493f8">22</text>
-<text x="728" y="343" font-size="10" font-weight="700" text-anchor="end" fill="#4493f8">TODAY</text>
+<g opacity="0.45">
+<rect x="640" y="322" width="98" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+<text x="651" y="346" font-size="16" font-weight="700" fill="#79c0ff">22</text>
 </g>
 <g>
-<rect x="16" y="400" width="98" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-<text x="27" y="424" font-size="16" font-weight="700" fill="#ff7b72">23</text>
+<rect x="16" y="400" width="98" height="72" rx="8" fill="#0c2d4d" stroke="#4493f8" stroke-width="2"/>
+<text x="27" y="424" font-size="16" font-weight="700" fill="#4493f8">23</text>
+<text x="104" y="421" font-size="10" font-weight="700" text-anchor="end" fill="#4493f8">TODAY</text>
 </g>
 <g>
 <rect x="120" y="400" width="98" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
