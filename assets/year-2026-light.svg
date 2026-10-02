@@ -287,8 +287,8 @@
 <rect x="68" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <text x="158" y="370" font-size="12" font-weight="700" fill="#0969da">10월</text>
 <rect x="222" y="376" width="13" height="13" rx="3" fill="#9be9a8" stroke="#d1d9e0" stroke-width="0.75"/>
-<rect x="238" y="376" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#0969da" stroke-width="2"/>
-<rect x="254" y="376" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
+<rect x="238" y="376" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
+<rect x="254" y="376" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#0969da" stroke-width="2"/>
 <rect x="158" y="392" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="174" y="392" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="190" y="392" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
