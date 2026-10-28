@@ -313,8 +313,8 @@
 <rect x="158" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="174" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="190" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
-<rect x="206" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#0969da" stroke-width="2"/>
-<rect x="222" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
+<rect x="206" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
+<rect x="222" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#0969da" stroke-width="2"/>
 <rect x="238" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <rect x="254" y="440" width="13" height="13" rx="3" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="0.75"/>
 <text x="296" y="370" font-size="12" font-weight="700" fill="#1f2328">11월</text>
